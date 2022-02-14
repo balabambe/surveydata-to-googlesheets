@@ -1,14 +1,17 @@
 {
-  "name": "questionnaire-to-googlesheet",
+  "name": "surveydata-to-googlesheet",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "DEBUG=surveydata-to-googlesheet:* node ./bin/www",
+    "gentoken": "node ./google-sheet/authorization.js yes"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "dayjs": "^1.10.7",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "googleapis": "^95.0.0",
     "morgan": "~1.9.1"
   }
 }
